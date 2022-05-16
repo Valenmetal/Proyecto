@@ -1,0 +1,435 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+    max-width: 100%;
+    width: 100%;
+    /* display: block; */
+    /* opcional */
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+    object-position: center center;
+}
+
+
+nav ul li {
+    display: inline;
+}
+
+a {
+    /* display: block;  */
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+    display: inline;
+}
+
+
+/* Quitamos los puntos de los <li> */
+li {
+    list-style-type: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+/* h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  } */
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+::selection {
+    background-color: rgb(139, 139, 166);
+}
+
+a::selection {
+    background-color: rgb(122, 101, 157);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    color: inherit;
+    /* display: block; */
+    /* opcional */
+    /* -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; */
+}
+
+/* Reseteamos las tablas */
+/* table,
+tr,
+td {
+    border-collapse: collapse;
+    border-spacing: 0;
+} */
+
+/* Evitamos problemas con los SVG */
+svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+    display: inline;
+    width: initial;
+  } */
+/* Configuramos la tipografía para toda la web */
+body {
+    color: #ffffff;
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(140, 118, 163, 0.782);
+    /* opcional */
+    line-height: 1.4em;
+    /* opcional */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+/* CSS */
+
+.body__grid-container {
+    display: grid;
+    grid-template: 90px 5fr 3fr 1fr / 1fr;
+    grid-template-areas: "navbar navbar navbar"
+        "body body body"
+        "contacto contacto contacto"
+        "footer footer footer";
+}
+
+#navbar {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    grid-area: navbar;
+    height: 80px;
+    margin-bottom: 50px;
+    background: rgb(150, 132, 188);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-animation {
+    width: 140px;
+    height: 45px;
+    font-size: 23px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+    padding-left: 5px;
+}
+
+.btn-animation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 4px;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.btn-animation:hover::before {
+    width: 100%;
+}
+
+.btn-animation:hover {
+    color: rgba(115, 54, 171, 0.568);
+}
+
+.btn-animation:active:before {
+    background: #b9b9b9;
+}
+
+.products {
+    display: grid;
+    margin: 10px;
+    grid-area: body;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    grid-template: 1fr 1fr / repeat(4, minmax(240px, 1fr));
+}
+
+.product {
+    height:fit-content;
+    max-width: 300px;
+    border: solid 4px rgb(150, 132, 188);
+    border-radius: 5px;
+    background-color: #212121;
+    box-shadow: 1px 1px 30px rgba(66, 30, 100, 0.195),
+        -15px -15px 30px rgba(66, 30, 100, 0.195);
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+        transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.img-product {
+    margin-left: auto;
+    margin-right: auto;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+        transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.product:hover,
+.img-product:hover {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transform: scale(1.05);
+}
+
+.epigrafe {
+    margin: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgba(150, 132, 188, 0.914);
+}
+
+/* Contacto */
+/* Contacto */
+/* Contacto */
+/* Contacto */
+
+.contact {
+    grid-area: contacto;
+    margin-top: 30px;
+    color: rgba(47, 38, 67, 0.914);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+}
+.flex-contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-checkbox{
+    display: flex;
+}
+
+.contact-btn{
+    margin-top: 10px;
+   width:fit-content;
+}
+/* Precios */
+/* Precios */
+/* Precios */
+/* Precios */
+
+.precios {
+    padding: 110px 30px;
+}
+
+/* US */
+/* US */
+/* US */
+/* US */
+
+
+.background-us {
+    margin: 120px auto;
+    width: 75%;
+    background-color: rgba(66, 30, 100, 0.101);
+}
+
+.h2-us {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.us {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-us {
+    margin: 15px;
+}
+
+.img-us {
+    max-height: 350px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 30px rgba(66, 30, 100, 0.195),
+        -15px -15px 30px rgba(66, 30, 100, 0.195);
+    max-width: 70vh;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+        transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+}
+
+.img-us:hover {
+    transform: scale(1.05);
+
+}
+
+
+main {
+    min-height: calc(100vh - 52.39px - 88px);
+}
+
+input {
+    border: solid 1px rgb(131, 104, 147);
+    border-radius: 11px;
+    background-color: rgba(131, 104, 147, 0.127);
+}
+
+input:active {
+    color: rgba(108, 34, 176, 0.531);
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=checkbox] {
+    margin-left: 10px;
+    appearance: none;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    align-self: center;
+    place-content: center;
+  }
+  
+  input[type=checkbox]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em rgb(122, 101, 157);
+  }
+  
+  input[type=checkbox]:checked::before {
+    transform: scale(1);
+  }
+
+select,
+input[type=submit],
+input[type=reset]{
+    background-color: rgba(150, 132, 188, 0.426);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+footer {
+    grid-area: footer;
+    padding: 10px;
+    height: 60px;
+}
+
+@media screen and (max-width: 1280px) {
+
+    .products {
+        grid-template: 1fr 1fr / repeat(3, minmax(190px, 1fr));
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+    .btn-animation::before {
+        left: 1px;
+        width: 3px;
+    }
+
+    .btn-animation {
+        font-size: 4vw;
+    }
+
+    .products {
+        grid-template: 1fr 1fr / repeat(2, minmax(100px, 1fr));
+    }
+
+    .img-us {
+        max-height: 150px;
+    }
+
+}
