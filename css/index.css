@@ -178,6 +178,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+.navbar-toggler-icon {
+    color: aqua;
+    background-color: rgb(213, 209, 214);
+}
+.navbar-toggler {
+    font-size: 1rem;
+    background-color: rgba(150, 132, 188, 0.914);
+    border: 3px solid rgba(128, 113, 161, 0.914);
+}
 
 .btn-animation {
     width: 140px;
