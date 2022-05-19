@@ -158,14 +158,20 @@ body {
 
 .body__grid-container {
     display: grid;
-    grid-template: 90px 5fr 3fr 1fr / 1fr;
+    grid-template: 60px 4fr 4fr 1fr / 1fr;
     grid-template-areas: "navbar navbar navbar"
         "body body body"
         "contacto contacto contacto"
         "footer footer footer";
 }
 
-#navbar {
+.navbar {
+    padding: 20px 0;
+    z-index: 10000;
+    background: rgb(150, 132, 188);
+}
+
+/* #navbar {
     z-index: 1000;
     position: fixed;
     top: 0px;
@@ -177,16 +183,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .navbar-toggler-icon {
-    color: aqua;
-    background-color: rgb(213, 209, 214);
+    color: rgb(210, 191, 221);
 }
 .navbar-toggler {
     font-size: 1rem;
     background-color: rgba(150, 132, 188, 0.914);
     border: 3px solid rgba(128, 113, 161, 0.914);
 }
+
+.nav-link{
+    font-size: 1.4em;
+    color: rgb(210, 191, 221);
+}
+
+.nav-link:focus, .nav-link:hover, .navbar-brand:hover {
+    color: #feffff;
+}
+
 
 .btn-animation {
     width: 140px;
@@ -229,14 +244,15 @@ body {
 }
 
 .products {
+    height: fit-content;
     display: grid;
-    margin: 10px;
+    margin: 40px 20px 20px 20px;
     grid-area: body;
     justify-items: center;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    grid-template: 1fr 1fr / repeat(4, minmax(240px, 1fr));
+    grid-template: 40vh 40vh / repeat(4, minmax(240px, 1fr));
 }
 
 .product {
@@ -279,13 +295,13 @@ body {
 
 .contact {
     grid-area: contacto;
-    margin-top: 30px;
+    margin: 10px auto auto 10px;
     color: rgba(47, 38, 67, 0.914);
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 40px;
     display: flex;
-    justify-content: center;
+    
 }
 .flex-contact{
     display: flex;
@@ -354,9 +370,9 @@ body {
 }
 
 
-main {
+/* main {
     min-height: calc(100vh - 52.39px - 88px);
-}
+} */
 
 input {
     border: solid 1px rgb(131, 104, 147);
@@ -434,6 +450,7 @@ footer {
     }
 
     .products {
+        margin: 40px 20px 0 20px;
         grid-template: 1fr 1fr / repeat(2, minmax(100px, 1fr));
     }
 
