@@ -3,16 +3,17 @@ $color:(
     soft-white: #eeeeed,
     soft-black:#212121,
     white: #feffff,
-    gray: rgba(50, 48, 48, 0.777),
+    grey: rgba(50, 48, 48, 0.777),
     soft-gray: rgba(87, 85, 85, 0.71),
     purple: rgba(50, 23, 75, 0.362),
 
-    body-background: rgba(128, 91, 171, 0.782),
+    body-background: rgba(255, 255, 255, 0.782),
 
     form: rgba(128, 91, 171, 0.394),
+    input-white: #eeeeed73,
 
-    navbar-background: rgb(99, 74, 127),
-    navbar-border: rgb(67, 51, 87),
+    navbar-background: rgb(0, 0, 0),
+    navbar-border: rgb(42, 41, 43),
 
     footer: rgb(99, 74, 127),
 
@@ -28,3 +29,4 @@ $color:(
     selection: rgb(122, 101, 157),
 
 );
+
