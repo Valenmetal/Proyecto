@@ -165,6 +165,22 @@ body {
 /* CSS */
 /* CSS */
 
+::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: map-get($color, footer);
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: map-get($color, grey);
+}
+
 .body__grid-container {
     display: grid;
     grid-template: 60px 2fr 0.5fr / 1fr;
@@ -217,10 +233,15 @@ body {
         text-shadow: 3px 5px 2px map-get($color, grey);
         font-family: 'Hind Siliguri', sans-serif;
     }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        @extend h1;
+    }
 }
 
 .grid-area-body {
-    display: grid;
     grid-area: body;
 }
 
@@ -284,7 +305,7 @@ body {
 
 .categories {
     @extend .products;
-    grid-template: 40vh / repeat(3, minmax(240px, 1fr));
+    grid-template: 20vh / repeat(3, minmax(240px, 1fr));
     grid-area: body;
 }
 
@@ -345,13 +366,28 @@ body {
     width: fit-content;
 }
 
-/* Precios */
-/* Precios */
-/* Precios */
-/* Precios */
+/* Talles */
+/* Talles */
+/* Talles */
+/* Talles */
 
-.precios {
-    padding: 110px 30px;
+.talles {
+    width: fit-content;
+    height: fit-content;
+    margin: 10px auto 0px auto;
+    padding: 10px;
+    border-radius: 43px;
+    background: linear-gradient(225deg, transparent, #2926268e);
+    box-shadow: -13px 13px 40px #2926268e;
+    grid-area: contacto;
+    background-color: map-get($color, form);
+    text-shadow: 3px 5px 2px map-get($color, grey);
+    backdrop-filter: blur(1.2px);
+    -webkit-backdrop-filter: blur(1.2px);
+    color: map-get($color, soft-white);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    margin: 30px;
 }
 
 /* US */
@@ -372,6 +408,7 @@ body {
     justify-content: center;
     padding-top: 30px;
     padding-left: 30px;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .us {

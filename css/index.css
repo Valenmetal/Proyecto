@@ -137,6 +137,19 @@ body {
 /* CSS */
 /* CSS */
 /* CSS */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #634a7f; }
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: transparent; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(50, 48, 48, 0.777); }
+
 .body__grid-container {
   display: grid;
   grid-template: 60px 2fr 0.5fr / 1fr;
@@ -169,12 +182,14 @@ body {
 .titulo {
   grid-area: body;
   margin: 90px auto 20px auto; }
-  .titulo h1 {
+  .titulo h1, .titulo h2 {
     text-shadow: 3px 5px 2px rgba(50, 48, 48, 0.777);
     font-family: 'Hind Siliguri', sans-serif; }
+  .titulo h2 {
+    display: flex;
+    justify-content: center; }
 
 .grid-area-body {
-  display: grid;
   grid-area: body; }
 
 .products, .categories {
@@ -220,7 +235,7 @@ body {
 /* Categorias */
 /* Categorias */
 .categories {
-  grid-template: 40vh/repeat(3, minmax(240px, 1fr));
+  grid-template: 20vh/repeat(3, minmax(240px, 1fr));
   grid-area: body; }
 
 /* Contacto */
@@ -236,7 +251,7 @@ body {
   background: linear-gradient(225deg, transparent, #2926268e);
   box-shadow: -13px 13px 40px #2926268e;
   grid-area: contacto;
-  background-color: rgba(128, 91, 171, 0.394);
+  background-color: rgba(140, 115, 172, 0.036);
   text-shadow: 3px 5px 2px rgba(50, 48, 48, 0.777);
   backdrop-filter: blur(1.2px);
   -webkit-backdrop-filter: blur(1.2px);
@@ -257,12 +272,27 @@ body {
   margin-top: 10px;
   width: fit-content; }
 
-/* Precios */
-/* Precios */
-/* Precios */
-/* Precios */
-.precios {
-  padding: 110px 30px; }
+/* Talles */
+/* Talles */
+/* Talles */
+/* Talles */
+.talles {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px auto 0px auto;
+  padding: 10px;
+  border-radius: 43px;
+  background: linear-gradient(225deg, transparent, #2926268e);
+  box-shadow: -13px 13px 40px #2926268e;
+  grid-area: contacto;
+  background-color: rgba(140, 115, 172, 0.036);
+  text-shadow: 3px 5px 2px rgba(50, 48, 48, 0.777);
+  backdrop-filter: blur(1.2px);
+  -webkit-backdrop-filter: blur(1.2px);
+  color: #eeeeed;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  margin: 30px; }
 
 /* US */
 /* US */
@@ -278,7 +308,8 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 30px;
-  padding-left: 30px; }
+  padding-left: 30px;
+  font-family: 'Hind Siliguri', sans-serif; }
 
 .us {
   padding: 20px;
