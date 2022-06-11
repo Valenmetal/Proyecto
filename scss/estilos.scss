@@ -230,12 +230,15 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    row-gap: 120px;
     grid-template: 40vh 40vh / repeat(4, minmax(240px, 1fr));
 }
 
 
 .product {
     height: fit-content;
+    text-align: center;
+    line-height: 2em;
     max-width: 300px;
     border: solid 4px map-get($color, border);
     border-radius: 5px;
@@ -311,7 +314,7 @@ body {
 .contact {
     width: fit-content;
     height: fit-content;
-    margin: 0 auto 0px auto;
+    margin: 60px auto 0px auto;
     padding: 10px;
     border-radius: 43px;
     background: linear-gradient(225deg, transparent, #2926268e);
@@ -593,6 +596,7 @@ input[type=reset] {
 @media screen and (max-width: 1280px) {
 
     .products {
+        row-gap: 30px;
         grid-template: 1fr 1fr / repeat(3, minmax(190px, 1fr));
     }
 
@@ -605,6 +609,10 @@ input[type=reset] {
         margin-right: 2px;
         width: 20px;
         height: 20px;
+    }
+
+    .epigrafe {
+        font-size: 1.5rem;
     }
 
     .talles__grid-container {
@@ -624,12 +632,12 @@ input[type=reset] {
         grid-template: 1fr 1fr / repeat(2, minmax(100px, 1fr));
     }
 
-    .img-us {
-        max-height: 150px;
+    .product{
+        line-height: 1.5em;
     }
 
-    .epigrafe {
-        font-size: 1.5rem;
+    .img-us {
+        max-height: 150px;
     }
 
     .contact {
@@ -644,6 +652,7 @@ input[type=reset] {
     .talles {
         font-size: 1.5rem;
     }
+
 
     .index__grid-container {
         display: grid;
