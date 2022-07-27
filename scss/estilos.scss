@@ -167,6 +167,14 @@ body {
     @extend .talles__grid-container;
 }
 
+.cart__grid-container {
+    display: grid;
+    grid-template: 60px 2fr / 1fr;
+    grid-template-areas: "navbar navbar navbar"
+        "body body body"
+        "footer footer footer";
+}
+
 .grid-area-body {
     grid-area: body;
 }
@@ -246,16 +254,24 @@ body {
     box-shadow: 1px 1px 30px rgba(66, 30, 100, 0.195),
         -15px -15px 30px rgba(66, 30, 100, 0.195);
     transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
-        transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+        transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+        opacity 1s;
 
     &:hover {
         border-bottom-right-radius: 50px;
         border-top-left-radius: 50px;
         transform: scale(1.05);
     }
+
+    &:hover button {
+        transition: all 0.8s;
+        opacity: 1;
+        filter: none;
+    }
 }
 
 .img-product {
+    z-index: 98;
     margin-left: auto;
     margin-right: auto;
     transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
@@ -266,6 +282,20 @@ body {
         border-top-left-radius: 50px;
         transform: scale(1.05);
     }
+}
+
+.addCart {
+    border-radius: 25px;
+    transition: all 0.5s;
+    filter: blur(2px);
+    opacity: 0;
+    position: absolute;
+    bottom: 13%;
+    right: 25%;
+    height: 3rem;
+    width: 50%;
+    color: map-get($color, soft-white);
+    background-color: map-get($color, btn);
 }
 
 .epigrafe {
@@ -285,7 +315,7 @@ body {
 .categories {
     @extend .products;
     margin: 130px 20px 30px 20px;
-    grid-template: 20vh / repeat(3, minmax(240px, 1fr));
+    grid-template: 20vh / repeat(2, minmax(240px, 1fr));
     grid-area: body;
 }
 
@@ -368,6 +398,25 @@ body {
     font-size: 2rem;
     margin: 5px;
 }
+
+
+/* CART */
+/* CART */
+/* CART */
+/* CART */
+
+.cartContainer {
+    @extend .talles;
+    margin: 100px auto 0px auto;
+    width: 75%;
+    height: 20rem;
+
+    p{
+        margin-left: 30%;
+        margin-top: 9%;
+    }
+}
+
 
 /* US */
 /* US */
@@ -602,7 +651,7 @@ input[type=reset] {
 
     .categories {
         margin-top: 50px;
-        grid-template: 1fr / repeat(3, minmax(190px, 1fr));
+        grid-template: 1fr / repeat(2, minmax(190px, 1fr));
     }
 
     .social-logo {
@@ -632,7 +681,7 @@ input[type=reset] {
         grid-template: 1fr 1fr / repeat(2, minmax(100px, 1fr));
     }
 
-    .product{
+    .product {
         line-height: 1.5em;
     }
 
