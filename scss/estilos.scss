@@ -405,15 +405,15 @@ body {
 /* CART */
 /* CART */
 
-.cartContainer {
+.cart-container {
     @extend .talles;
     margin: 100px auto 0px auto;
     width: 75%;
     height: 20rem;
 
-    p{
+    .no-prod{
         margin-left: 30%;
-        margin-top: 9%;
+        margin-top: 400px;
     }
 }
 

@@ -277,7 +277,7 @@ body {
 /* Talles */
 /* Talles */
 /* Talles */
-.talles, .cartContainer {
+.talles, .cart-container {
   width: fit-content;
   height: fit-content;
   margin: 10px auto 0px auto;
@@ -299,11 +299,11 @@ body {
 /* CART */
 /* CART */
 /* CART */
-.cartContainer {
+.cart-container {
   margin: 100px auto 0px auto;
   width: 75%;
   height: 20rem; }
-  .cartContainer p {
+  .cart-container .no-prod {
     margin-left: 30%;
     margin-top: 9%; }
 
@@ -506,7 +506,7 @@ input[type=reset] {
   .categories {
     margin-top: 30px;
     grid-template: 1fr/repeat(2, minmax(50px, 1fr)); }
-  .talles, .cartContainer {
+  .talles, .cart-container {
     font-size: 1.5rem; }
   .index__grid-container {
     display: grid;

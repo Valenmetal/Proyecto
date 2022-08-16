@@ -100,81 +100,26 @@ class Producto {
   }
 }
 
-let productList = [
-  {
-    id: 1,
-    name: "Nike Air Max",
-    description: "Nike Air Max blancas",
-    src: "assets/img/Air-Max1.png",
-    category: "male",
-    price: 9000,
-  },
-  {
-    id: 2,
-    name: "Nike Air Jordan",
-    description: "Nike Air Jordan rojas",
-    src: "assets/img/Air-Jordan2.png",
-    category: "male",
-    price: 9000,
-  },
-  {
-    id: 3,
-    name: "Nike Air Jordan",
-    description: "Nike Air Jordan cromadas",
-    src: "assets/img/Air-Jordan3.png",
-    category: "male",
-    price: 6000,
-  },
-  {
-    id: 4,
-    name: "Nike Air Max",
-    description: "Nike Air Max Negras",
-    src: "assets/img/Air-Max2.png",
-    category: "female",
-    price: 5000,
-  },
-  {
-    id: 5,
-    name: "Nike Air Max",
-    description: "Nike Air Max gris",
-    src: "assets/img/Air-Max3.png",
-    category: "male",
-    price: 8000,
-  },
-  {
-    id: 6,
-    name: "Nike Air Zoom",
-    description: "Nike Air Zoom Blancas",
-    src: "assets/img/Air-Zoom1.png",
-    category: "female",
-    price: 6000,
-  },
-  {
-    id: 7,
-    name: "Nike Venture",
-    description: "Nike Air Venture azules",
-    src: "assets/img/Venture1.png",
-    category: "male",
-    price: 8000,
-  },
-  {
-    id: 8,
-    name: "Nike Next",
-    description: "Nike Next Nature",
-    src: "assets/img/Next-Nature1.png",
-    category: "female",
-    price: 8000,
-  }
-];
+let prod1 = new Producto("1", "Nike Air Max", "Nike Air Max blancas", "assets/img/Air-Max1.png", "male", 9000);
+let prod2 = new Producto("2", "Nike Air Jordan", "Nike Air Jordan rojas", "assets/img/Air-Jordan2.png", "male", 9000);
+let prod3 = new Producto("3", "Nike Air Jordan", "Nike Air Jordan cromadas", "assets/img/Air-Jordan3.png", "male", 6000);
+let prod4 = new Producto("4", "Nike Air Max", "Nike Air Max Negras", "assets/img/Air-Max2.png", "female", 5000);
+let prod5 = new Producto("5", "Nike Air Max", "Nike Air Max gris", "assets/img/Air-Max3.png", "male", 8000);
+let prod6 = new Producto("6", "Nike Air Zoom", "Nike Air Zoom Blancas", "assets/img/Air-Zoom1.png", "female", 6000);
+let prod7 = new Producto("7", "Nike Venture", "Nike Air Venture azules", "assets/img/Venture1.png", "male", 8000);
+let prod8 = new Producto("8", "Nike Next", "Nike Next Nature", "assets/img/Next-Nature1.png", "female", 8000);
+
+let productList = [];
+productList.push(prod1, prod2, prod3, prod4, prod5, prod6, prod7, prod8);
 
 const productMaker = () => {
   productList.forEach((e) => {
     let div = document.createElement("div");
     div.className = "product";
     div.setAttribute("id", e.id);
-    div.innerHTML = `<p class="epigrafe">${e.name}</p>
+    div.innerHTML = `<p class="epigrafe" id="name">${e.name}</p>
                         <img alt="${e.description}" src="${e.src}" class="img-product"><button class="addCart">Agregar al carrito</button>
-                        <p class="epigrafe">$${e.price}</p>
+                        <p class="epigrafe" id="price">$${e.price}</p>
                         `;
     document.querySelector(".products").appendChild(div);
   });
