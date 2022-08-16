@@ -72,7 +72,8 @@
                         </div>
 
 
-                        <div class="ms-auto">
+                        <div class="ms-auto d-flex">
+                            <span class="cart_quantity"></span>
 
                             <a class="nav-link cart" href="/pages/cart.html">
                                 <svg viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2"
@@ -82,7 +83,7 @@
                                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                                 </svg>
                             </a>
-                            <span>0</span>
+
                         </div>
 
                     </div>
@@ -92,9 +93,14 @@
             <div class="grid-area-body">
 
                 <div class="cart_container">
-                    <p class="no-prod">No hay productos en el carrito!</p>
-                </div>
 
+
+                </div>
+                <div class="total_container">
+                    <h2>Total:$</h2>
+                    <h2 class="final_price"></h2>
+                    <button class="btn_comprar">Comprar</button>
+                </div>
             </div>
 
         </div>
@@ -138,7 +144,7 @@
                 </button>
             </div>
         </footer>
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="../cart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
