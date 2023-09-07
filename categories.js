@@ -6,6 +6,7 @@ let productList = [
     src: "/assets/img/Air-Max1.png",
     category: "male",
     price: 9000,
+    numberOfUnits: 1,
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ let productList = [
     src: "/assets/img/Air-Jordan2.png",
     category: "male",
     price: 9000,
+    numberOfUnits: 1,
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ let productList = [
     src: "/assets/img/Air-Jordan3.png",
     category: "male",
     price: 6000,
+    numberOfUnits: 1,
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ let productList = [
     src: "/assets/img/Air-Max2.png",
     category: "female",
     price: 5000,
+    numberOfUnits: 1,
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ let productList = [
     src: "/assets/img/Air-Max3.png",
     category: "male",
     price: 8000,
+    numberOfUnits: 1,
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ let productList = [
     src: "/assets/img/Air-Zoom1.png",
     category: "female",
     price: 6000,
+    numberOfUnits: 1,
   },
   {
     id: 7,
@@ -54,6 +60,7 @@ let productList = [
     src: "/assets/img/Venture1.png",
     category: "male",
     price: 8000,
+    numberOfUnits: 1,
   },
   {
     id: 8,
@@ -62,6 +69,7 @@ let productList = [
     src: "/assets/img/Next-Nature1.png",
     category: "female",
     price: 8000,
+    numberOfUnits: 1,
   }
 ];
 

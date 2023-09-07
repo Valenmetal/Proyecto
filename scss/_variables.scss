@@ -1,5 +1,4 @@
-$color:(
-
+$color: (
     soft-white: #eeeeed,
     soft-black:#212121,
     white: #feffff,
@@ -19,8 +18,10 @@ $color:(
 
     border: rgba(129, 89, 157, 0.32),
 
-    btn: rgba(187, 147, 210, 0.127),
+    
 
+    btn: rgba(187, 147, 210, 0.127),
+    btn-delete:rgba(122, 35, 35, 0.911),
 
     input-background: rgba(131, 104, 147, 0.127),
     input-btn: rgba(120, 84, 138, 0.459),
@@ -29,4 +30,3 @@ $color:(
     selection: rgb(122, 101, 157),
 
 );
-
